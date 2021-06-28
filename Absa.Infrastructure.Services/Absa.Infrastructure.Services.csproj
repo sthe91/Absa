@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.3" />
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="Serilog" Version="2.10.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Absa.Infrastructure.Models\Absa.Infrastructure.Models.csproj" />
+    <ProjectReference Include="..\Absa.Infrastructure.EntityFramework\Absa.Infrastructure.EntityFramework.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Base\" />
+    <Folder Include="Phonebook\" />
+    <Folder Include="Entry\" />
+    <Folder Include="Scripts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Serilog" />
+    <None Remove="Scripts\" />
+  </ItemGroup>
+</Project>

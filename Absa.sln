@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.808.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Absa.Api", "Absa.Api\Absa.Api.csproj", "{E678BE07-EE2F-4693-85EC-03524AA9C480}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{3DF38DFC-DE32-44C7-A04B-E1E7DCF25E3B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{F91AB38F-C43A-4B6D-A439-668F89697E64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Absa.Infrastructure.EntityFramework", "Absa.Infrastructure.EntityFramework\Absa.Infrastructure.EntityFramework.csproj", "{DF69CC9D-3A94-48C6-A343-65E5AF3CD729}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Absa.Infrastructure.Models", "Absa.Infrastructure.Models\Absa.Infrastructure.Models.csproj", "{7636ADED-D37E-4DE4-BED3-D7868816BCBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Absa.Infrastructure.Services", "Absa.Infrastructure.Services\Absa.Infrastructure.Services.csproj", "{61464A2D-7958-4415-ADFA-51A884ED1A45}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logic", "Logic", "{3932D747-41AD-4F94-BA8A-E35C66E549E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Absa.Logic", "Absa.Logic\Absa.Logic.csproj", "{6DE532B7-31CE-4589-B7CA-3415421F83F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{C96D8004-4331-4B09-89CE-CDF33D92C223}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Absa.UI", "Absa.UI\Absa.UI.csproj", "{9544985F-D289-4C67-AE33-C10DE04C610B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E678BE07-EE2F-4693-85EC-03524AA9C480}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E678BE07-EE2F-4693-85EC-03524AA9C480}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E678BE07-EE2F-4693-85EC-03524AA9C480}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E678BE07-EE2F-4693-85EC-03524AA9C480}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF69CC9D-3A94-48C6-A343-65E5AF3CD729}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF69CC9D-3A94-48C6-A343-65E5AF3CD729}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF69CC9D-3A94-48C6-A343-65E5AF3CD729}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF69CC9D-3A94-48C6-A343-65E5AF3CD729}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7636ADED-D37E-4DE4-BED3-D7868816BCBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7636ADED-D37E-4DE4-BED3-D7868816BCBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7636ADED-D37E-4DE4-BED3-D7868816BCBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7636ADED-D37E-4DE4-BED3-D7868816BCBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61464A2D-7958-4415-ADFA-51A884ED1A45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61464A2D-7958-4415-ADFA-51A884ED1A45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61464A2D-7958-4415-ADFA-51A884ED1A45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61464A2D-7958-4415-ADFA-51A884ED1A45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DE532B7-31CE-4589-B7CA-3415421F83F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DE532B7-31CE-4589-B7CA-3415421F83F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DE532B7-31CE-4589-B7CA-3415421F83F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DE532B7-31CE-4589-B7CA-3415421F83F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9544985F-D289-4C67-AE33-C10DE04C610B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9544985F-D289-4C67-AE33-C10DE04C610B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9544985F-D289-4C67-AE33-C10DE04C610B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9544985F-D289-4C67-AE33-C10DE04C610B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4DCDAE1F-7BAB-4B34-BACF-33F89771CFFA}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E678BE07-EE2F-4693-85EC-03524AA9C480} = {3DF38DFC-DE32-44C7-A04B-E1E7DCF25E3B}
+		{DF69CC9D-3A94-48C6-A343-65E5AF3CD729} = {F91AB38F-C43A-4B6D-A439-668F89697E64}
+		{7636ADED-D37E-4DE4-BED3-D7868816BCBA} = {F91AB38F-C43A-4B6D-A439-668F89697E64}
+		{61464A2D-7958-4415-ADFA-51A884ED1A45} = {F91AB38F-C43A-4B6D-A439-668F89697E64}
+		{6DE532B7-31CE-4589-B7CA-3415421F83F2} = {3932D747-41AD-4F94-BA8A-E35C66E549E2}
+		{9544985F-D289-4C67-AE33-C10DE04C610B} = {C96D8004-4331-4B09-89CE-CDF33D92C223}
+	EndGlobalSection
+EndGlobal

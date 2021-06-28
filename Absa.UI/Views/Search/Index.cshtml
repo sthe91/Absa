@@ -1,0 +1,67 @@
+﻿@model Absa.UI.ViewModels.ContactListViewModel
+@{
+    ViewData["Title"] = "Search Results";
+}
+
+<div class="row">
+    <div class="col-sm-6 col-xs-12 center-align">
+        <h1>Search Results</h1>
+        <div class="row">
+            <div class="col-sm-12">
+                <a href="Phonebook" class="btn btn-light margin-bottom">Back to Phonebooks</a>
+                <a href="/Contact/Create?pid=@Model.PhonebookId" class="btn btn-primary margin-bottom">Create Contact</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="input-group margin-bottom">
+                    <input id="searchText" type="text" class="form-control" placeholder="Search for contact" aria-label="Search for contact" aria-describedby="searchButton">
+                    <div class="input-group-append">
+                        <a id="searchButton" class="btn btn-outline-secondary">Search</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                @if (Model.Entries.Count > 0)
+                {
+
+                    <div class="list-group margin-bottom">
+                        @foreach (var entry in Model.Entries.OrderBy(x => x.Name))
+                        {
+                            <div class="list-group-item list-group-item-action">
+                                <a href="/Contact?eid=@entry.EntryId">
+                                    <span>@entry.Name</span><br />
+                                    <small href="/Contact?eid=@entry.EntryId">@entry.PhoneNumber</small>
+                                </a>
+                            </div>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <div class="alert alert-info" role="alert">
+                        There are no results to display.
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script>$(document).ready(function () {
+            var urlParams = new URLSearchParams(window.location.search);
+            debugger
+            var searchText = urlParams.get('searchText');
+
+            $("#searchText").val(searchText);
+        });
+
+        $("#searchButton").on("click", function () {
+            var searchText = $("#searchText").val();
+
+            location.href = "/Search?searchText=" + searchText;
+        });</script>
+}

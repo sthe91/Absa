@@ -1,0 +1,40 @@
+﻿@model Absa.UI.ViewModels.ContactListViewModel
+@{
+    ViewData["Title"] = "Contacts";
+}
+
+<div class="row">
+    <div class="col-sm-6 col-xs-12 center-align">
+        <h1>Contacts</h1>
+        <div class="row">
+            <div class="col-sm-12">
+                <a href="Phonebook" class="btn btn-light margin-bottom">Back to Phonebooks</a>
+                <a href="/Contact/Create?pid=@Model.PhonebookId" class="btn btn-primary margin-bottom">Create Contact</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                @if (Model.Entries.Count > 0)
+                {
+                    <div class="list-group">
+                        @foreach (var entry in Model.Entries.Where(x => x.Phonebook.PhonebookId == new Guid(Model.PhonebookId)).OrderBy(x => x.Name))
+                        {
+                            <div class="list-group-item list-group-item-action">
+                                <a href="tel:@entry.Phonebook">
+                                    <span>@entry.Name</span><br />
+                                    <small href="tel:@entry.Phonebook">@entry.PhoneNumber</small>
+                                </a>
+                            </div>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <div class="alert alert-info" role="alert">
+                        There are no contacts in this Phonebook. Please create a new contact.
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

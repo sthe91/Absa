@@ -1,0 +1,49 @@
+﻿@model Absa.UI.ViewModels.PhonebookViewModel
+@{
+    ViewData["Title"] = "Create Phonebook";
+}
+
+<form asp-controller="Phonebook" asp-action="Create" method="post">
+    @if (!Model.ShowAlerts)
+    {
+        <div class="row">
+            <div class="col-sm-6 col-xs-12 center-align">
+                <h1>Create Phonebook</h1>
+                <input type="hidden" asp-for="Phonebook.PhonebookId" />
+                <div class="form-group">
+                    <label asp-for="Phonebook.Name"></label>
+                    <input type="text" class="form-control" asp-for="Phonebook.Name">
+                    <span asp-validation-for="Phonebook.Name"></span>
+                </div>
+                <div class="form-group" style="text-align:center;">
+                    <button type="submit" class="btn btn-primary center-align">Create Phonebook</button>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="row">
+            <div class="col-sm-6 col-xs-12 center-align">
+                <a href="/Phonebook" class="btn btn-light margin-bottom">Back to Phonebooks</a>
+                <a href="/Phonebook/Create" class="btn btn-primary margin-bottom">Create another Phonebook</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-xs-12 center-align">
+                @if (Model.HasError)
+                {
+                    <div class="alert alert-danger" role="alert">
+                        Something went wrong. Please try again later.
+                    </div>
+                }
+                else
+                {
+                    <div class="alert alert-success" role="alert">
+                        Phonebook created successfully.
+                    </div>
+                }
+            </div>
+        </div>
+    }
+</form>

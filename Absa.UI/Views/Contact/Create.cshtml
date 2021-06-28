@@ -1,0 +1,59 @@
+﻿@model Absa.UI.ViewModels.ContactViewModel
+@{
+    ViewData["Title"] = "Create Contact";
+}
+
+<form asp-controller="Contact" asp-action="Create" method="post">
+    <div class="row">
+        <div class="col-sm-6 col-xs-12 center-align">
+            <h1>Create Contact</h1>
+        </div>
+    </div>
+    @if (!Model.ShowAlerts)
+    {
+        <div class="row">
+            <div class="col-sm-6 col-xs-12 center-align">
+                <input type="hidden" asp-for="Entry.EntryId" />
+                <input type="hidden" asp-for="Entry.Phonebook.PhonebookId" />
+                <div class="form-group">
+                    <label asp-for="Entry.Name"></label>
+                    <input type="text" class="form-control" asp-for="Entry.Name">
+                    <span asp-validation-for="Entry.Name"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Entry.PhoneNumber"></label>
+                    <input type="tel" class="form-control" asp-for="Entry.PhoneNumber">
+                    <span asp-validation-for="Entry.PhoneNumber"></span>
+                </div>
+                <div class="form-group" style="text-align:center;">
+                    <button type="submit" class="btn btn-primary center-align">Create Contact</button>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="row">
+            <div class="col-sm-6 col-xs-12 center-align">
+                <a href="/Contact?pid=@Model.Entry.Phonebook.PhonebookId" class="btn btn-light margin-bottom">Back to Phonebook</a>
+                <a href="/Contact/Create?pid=@Model.Entry.Phonebook.PhonebookId" class="btn btn-primary margin-bottom">Create another Contact</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-xs-12 center-align">
+                @if (Model.HasError)
+                {
+                    <div class="alert alert-danger" role="alert">
+                        Something went wrong. Please try again later.
+                    </div>
+                }
+                else
+                {
+                    <div class="alert alert-success" role="alert">
+                        Contact created successfully.
+                    </div>
+                }
+            </div>
+        </div>
+    }
+</form>

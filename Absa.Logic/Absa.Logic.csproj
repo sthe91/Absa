@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Configurations>Release;Debug</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <NoWarn></NoWarn>
+    <NoWarn>1701;1702</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Absa.Infrastructure.EntityFramework\Absa.Infrastructure.EntityFramework.csproj" />
+    <ProjectReference Include="..\Absa.Infrastructure.Models\Absa.Infrastructure.Models.csproj" />
+    <ProjectReference Include="..\Absa.Infrastructure.Services\Absa.Infrastructure.Services.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Base\" />
+    <Folder Include="Entry\" />
+    <Folder Include="Phonebook\" />
+  </ItemGroup>
+</Project>
