@@ -31,9 +31,9 @@
                         @foreach (var entry in Model.Entries.OrderBy(x => x.Name))
                         {
                             <div class="list-group-item list-group-item-action">
-                                <a href="/Contact?eid=@entry.EntryId">
+                                <a href="tel:@entry.PhoneNumber">
                                     <span>@entry.Name</span><br />
-                                    <small href="/Contact?eid=@entry.EntryId">@entry.PhoneNumber</small>
+                                    <small>@entry.PhoneNumber</small>
                                 </a>
                             </div>
                         }
