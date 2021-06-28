@@ -20,9 +20,9 @@
                         @foreach (var entry in Model.Entries.Where(x => x.Phonebook.PhonebookId == new Guid(Model.PhonebookId)).OrderBy(x => x.Name))
                         {
                             <div class="list-group-item list-group-item-action">
-                                <a href="tel:@entry.Phonebook">
+                                <a href="tel:@entry.PhoneNumber">
                                     <span>@entry.Name</span><br />
-                                    <small href="tel:@entry.Phonebook">@entry.PhoneNumber</small>
+                                    <small>@entry.PhoneNumber</small>
                                 </a>
                             </div>
                         }
